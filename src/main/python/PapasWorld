@@ -9,7 +9,8 @@ fruits = [
     ("Banana",),
     ("Mango",),
     ("Orange",),
-    ("Grapes",)
+    ("Grapes",),
+    ("Watermillan")
 ]
 
 df = spark.createDataFrame(fruits, ["Fruit"])
