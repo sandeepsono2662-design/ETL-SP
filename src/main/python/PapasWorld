@@ -1,0 +1,19 @@
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder \
+    .appName("FruitNames") \
+    .getOrCreate()
+
+fruits = [
+    ("Apple",),
+    ("Banana",),
+    ("Mango",),
+    ("Orange",),
+    ("Grapes",)
+]
+
+df = spark.createDataFrame(fruits, ["Fruit"])
+
+df.show()
+
+spark.stop()
